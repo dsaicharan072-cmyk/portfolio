@@ -580,10 +580,13 @@ a {
   background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%);
 }
 .visual-nats {
-  background: linear-gradient(135deg, #1e293b 0%, #0b132b 100%);
+  background: linear-gradient(135deg, #0f2744 0%, #081226 100%);
 }
 .visual-rag {
-  background: linear-gradient(135deg, #4c1d95 0%, #0f172a 100%);
+  background: linear-gradient(135deg, #3b0764 0%, #0f172a 100%);
+}
+.visual-interview {
+  background: linear-gradient(135deg, #1e1b4b 0%, #172554 100%);
 }
 
 .visual-badge {
