@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saicharan Draksharapu — Full-Stack Developer & Open Source Contributor</title>
+  <title>SAICHARAN — Full-Stack Engineer &amp; Open-Source Contributor</title>
   <meta name="description" content="Saicharan Draksharapu is a Full-Stack Developer and Open-Source Contributor (Rocket.Chat, Apicurio, OpenAirInterface) building real-time platforms, AI multi-agent workflows, and distributed backends." />
   <meta name="keywords" content="Saicharan Draksharapu, Full Stack Developer, Software Engineer, Open Source, Rocket.Chat, Apicurio, React, Node.js, TypeScript, AI/ML" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Saicharan Draksharapu — Software Engineer & Builder" />
+  <meta property="og:title" content="SAICHARAN — Software Engineer &amp; Builder" />
   <meta property="og:description" content="Full-stack engineer and active open-source contributor with merged production code in Rocket.Chat, Apicurio Registry, OpenAirInterface 5G, and p5.js." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dsaicharan072-cmyk.github.io/portfolio/" />
 
   <link rel="icon" type="image/jpeg" href="assets/profile.jpg" />
+
+  <!-- Fonts: Space Grotesk + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,303 +27,310 @@
 </head>
 <body>
 
-  <!-- Floating Navigation Bar (Jake Sinclair Style) -->
-  <header class="header-nav">
-    <div class="nav-pill">
-      <a href="#top" class="nav-brand">
-        <div class="brand-avatar-mini">
-          <img src="assets/profile.jpg" alt="Saicharan Draksharapu" />
-        </div>
-        <span class="brand-name">Saicharan Draksharapu</span>
+  <!-- Top Editorial Bar (Christoph Mandl Style) -->
+  <header class="mandl-header">
+    <div class="mandl-header-inner">
+      <a href="#top" class="mandl-brand">
+        <span class="mandl-dot"></span>
+        <span class="mandl-wordmark">SAICHARAN.DEV</span>
       </a>
 
-      <nav class="nav-menu">
-        <a href="#work" class="nav-link">Work</a>
-        <a href="#oss" class="nav-link">Open Source</a>
-        <a href="#disciplines" class="nav-link">Disciplines</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#contact" class="nav-link nav-contact-btn">Contact</a>
+      <nav class="mandl-nav" aria-label="Primary">
+        <a href="#work" class="mandl-nav-link"><span>01</span> Work</a>
+        <a href="#oss" class="mandl-nav-link"><span>02</span> Open Source</a>
+        <a href="#disciplines" class="mandl-nav-link"><span>03</span> Disciplines</a>
+        <a href="#about" class="mandl-nav-link"><span>04</span> About</a>
+        <a href="#contact" class="mandl-nav-cta">Contact ↗</a>
       </nav>
 
-      <div class="nav-time">
-        <span class="pulse-indicator"></span>
-        <span id="current-time">BLR, IN</span>
-      </div>
+      <div class="mandl-clock" id="current-time">BLR · 00:00</div>
 
-      <button class="mobile-toggle" onclick="document.getElementById('mobile-drawer').classList.toggle('open')" aria-label="Toggle menu">
-        Menu
+      <button class="mandl-mobile-btn" onclick="document.getElementById('mobile-drawer').classList.toggle('open')" aria-label="Toggle menu">
+        MENU
       </button>
+    </div>
 
-      <div class="mobile-drawer" id="mobile-drawer">
-        <a href="#work" class="drawer-link" onclick="this.parentElement.classList.remove('open')">Work</a>
-        <a href="#oss" class="drawer-link" onclick="this.parentElement.classList.remove('open')">Open Source</a>
-        <a href="#disciplines" class="drawer-link" onclick="this.parentElement.classList.remove('open')">Disciplines</a>
-        <a href="#about" class="drawer-link" onclick="this.parentElement.classList.remove('open')">About</a>
-        <a href="#contact" class="drawer-link" onclick="this.parentElement.classList.remove('open')" style="color: var(--accent-warm);">Contact</a>
-      </div>
+    <div class="mandl-mobile-drawer" id="mobile-drawer">
+      <a href="#work" onclick="this.parentElement.classList.remove('open')">01 / Work</a>
+      <a href="#oss" onclick="this.parentElement.classList.remove('open')">02 / Open Source</a>
+      <a href="#disciplines" onclick="this.parentElement.classList.remove('open')">03 / Disciplines</a>
+      <a href="#about" onclick="this.parentElement.classList.remove('open')">04 / About</a>
+      <a href="#contact" onclick="this.parentElement.classList.remove('open')" class="drawer-red">05 / Contact ↗</a>
     </div>
   </header>
 
   <main id="top">
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="mandl-hero">
       <div class="container">
-        <div class="hero-intro-pill">
-          <span class="live-status-dot"></span>
-          <span>Available for SDE Internships & GSoC 2027</span>
+        <div class="hero-meta-strip">
+          <div class="status-tag">
+            <span class="live-dot"></span>
+            <span>AVAILABLE FOR SDE INTERNSHIPS &amp; GSOC 2027</span>
+          </div>
+          <div class="hero-coords">BENGALURU, IN · 12.9716° N, 77.5946° E</div>
         </div>
 
-        <h1 class="hero-headline">
-          Full-Stack Engineer &amp;<br>
-          Open-Source Contributor.
+        <h1 class="mandl-mega-title">
+          SAICHARAN<br>
+          <span class="title-outline">DRAKSHARAPU</span>
         </h1>
 
-        <p class="hero-statement">
-          Building resilient real-time web architectures, distributed microservices, and AI multi-agent workflows. Active contributor with merged code in Rocket.Chat, Apicurio Registry, and OpenAirInterface 5G.
-        </p>
+        <div class="hero-grid">
+          <div class="hero-statement-col">
+            <p class="hero-role-kicker">FULL-STACK ENGINEER &amp; OPEN-SOURCE CONTRIBUTOR</p>
+            <p class="hero-lead">
+              Building resilient real-time web architectures, distributed backends, and AI multi-agent workflows. Active contributor with merged code in <strong>Rocket.Chat</strong>, <strong>Apicurio Registry</strong>, and <strong>OpenAirInterface 5G</strong>.
+            </p>
 
-        <!-- Large Spotlight Card (Jake Sinclair Hero Anchor) -->
-        <div class="hero-showcase-card">
-          <div class="profile-image-frame">
-            <img src="assets/profile.jpg" alt="Saicharan Draksharapu" class="profile-main-img" />
-            <div class="experience-chip">
-              B.E. CSE (AI/ML) · <span class="chip-accent">8.5 CGPA</span>
+            <div class="hero-stats-row">
+              <div class="stat-cell">
+                <span class="stat-num">366+</span>
+                <span class="stat-lbl">LeetCode Solved</span>
+              </div>
+              <div class="stat-cell">
+                <span class="stat-num">5+</span>
+                <span class="stat-lbl">Major OSS Orgs</span>
+              </div>
+              <div class="stat-cell">
+                <span class="stat-num">8.5</span>
+                <span class="stat-lbl">B.E. CSE CGPA</span>
+              </div>
+              <div class="stat-cell">
+                <span class="stat-num">100D</span>
+                <span class="stat-lbl">Streak Badge</span>
+              </div>
+            </div>
+
+            <div class="hero-cta-row">
+              <a href="#work" class="btn-mandl btn-red">
+                <span>VIEW SELECTED WORK</span>
+                <i class="fa-solid fa-arrow-down"></i>
+              </a>
+              <a href="https://github.com/dsaicharan072-cmyk" target="_blank" rel="noopener noreferrer" class="btn-mandl btn-ink">
+                <i class="fa-brands fa-github"></i>
+                <span>GITHUB.COM/DSAICHARAN072-CMYK</span>
+              </a>
             </div>
           </div>
 
-          <div class="showcase-info-col">
-            <div class="showcase-metrics">
-              <div>
-                <div class="metric-val">366+</div>
-                <div class="metric-lbl">LeetCode Solved</div>
-              </div>
-              <div>
-                <div class="metric-val">5+</div>
-                <div class="metric-lbl">Major OSS Orgs</div>
-              </div>
-              <div>
-                <div class="metric-val">100D</div>
-                <div class="metric-lbl">Streak Badge</div>
+          <!-- Pixel-Reveal Portrait Frame (Christoph Mandl Signature) -->
+          <div class="hero-portrait-col">
+            <div class="pixel-frame" data-pixel-reveal>
+              <img src="assets/profile.jpg" alt="Saicharan Draksharapu" class="pixel-target-img" />
+              <canvas class="pixel-canvas" aria-hidden="true"></canvas>
+              <div class="pixel-frame-label">
+                <span>FIG. 00</span>
+                <span>HOVER TO RESOLVE</span>
               </div>
             </div>
-
-            <p class="showcase-bio-lead">
-              "Deep curiosity for production systems — from solving low-level runtime crashes in communications stacks to architecting reactive full-stack web applications."
+            <p class="portrait-quote">
+              “Deep curiosity for production systems — from solving low-level runtime crashes in communications stacks to architecting reactive full-stack web applications.”
             </p>
-
-            <div class="showcase-actions">
-              <a href="#work" class="btn-clean btn-solid">
-                <span>View Selected Work</span>
-                <i class="fa-solid fa-arrow-down"></i>
-              </a>
-              <a href="https://github.com/dsaicharan072-cmyk" target="_blank" rel="noopener noreferrer" class="btn-clean btn-ghost">
-                <i class="fa-brands fa-github"></i>
-                <span>github.com/dsaicharan072-cmyk</span>
-              </a>
-            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Selected Work Section -->
-    <section class="section-work" id="work">
+    <section class="mandl-section" id="work">
       <div class="container">
-        <div class="section-header-row">
-          <div>
-            <span class="section-kicker">Portfolio</span>
-            <h2 class="section-headline">Featured Projects</h2>
+        <div class="section-bar">
+          <div class="section-title-group">
+            <span class="section-index">01 / PORTFOLIO</span>
+            <h2 class="section-title">Selected Systems &amp; Products</h2>
           </div>
-          <p class="section-dek">
-            Production-grade systems, distributed realtime architectures, and multi-agent AI pipelines built with measurable impact. All live deployments and repositories accessible below.
+          <p class="section-note">
+            Production-grade platforms, spatial multiplayer worlds, and multi-agent AI pipelines. Live deployments and source repositories below.
           </p>
         </div>
 
-        <div class="work-grid">
-          <!-- Card 1: GroupConnect -->
-          <article class="work-card">
-            <div class="card-visual visual-suraksha">
-              <span class="visual-badge">Real-Time Multiplayer Platform</span>
-              <div class="visual-symbol">
-                <i class="fa-solid fa-people-roof"></i>
-              </div>
+        <div class="projects-stack">
+          <!-- Project 01: GroupConnect -->
+          <article class="project-row">
+            <div class="project-visual-tile" data-pixel-tile>
+              <div class="tile-grid-bg"></div>
+              <span class="tile-index">01</span>
+              <i class="fa-solid fa-people-roof tile-icon"></i>
+              <span class="tile-tag">REAL-TIME MULTIPLAYER</span>
             </div>
-            <div class="card-body">
-              <div class="card-meta-line">
-                <span class="card-year">2026</span>
-                <span>React · TypeScript · Phaser · Socket.IO · LiveKit · Supabase</span>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="meta-year">2026</span>
+                <span class="meta-stack">React · TypeScript · Phaser · MQTT/WebSockets · LiveKit · Supabase</span>
               </div>
-              <h3 class="card-title">GroupConnect — Multiplayer 2D Virtual Office</h3>
-              <p class="card-summary">
+              <h3 class="project-name">GroupConnect — Multiplayer 2D Virtual Office</h3>
+              <p class="project-desc">
                 Spatial workplace platform inspired by Gather.town. Distributed teams navigate synchronized avatars with arrow keys/WASD through custom virtual offices. Features dynamic character customization (body, skin tone, hair, executive outfits), door portals, password-protected private offices, room-based proximity chat, and WebRTC audio/video mesh via LiveKit.
               </p>
-              <div class="card-tags">
-                <span class="tag">TypeScript</span>
-                <span class="tag">React</span>
-                <span class="tag">Phaser</span>
-                <span class="tag">Socket.IO</span>
-                <span class="tag">LiveKit WebRTC</span>
-                <span class="tag">Supabase</span>
+              <div class="project-tags">
+                <span>TypeScript</span>
+                <span>React</span>
+                <span>Phaser</span>
+                <span>Socket.IO</span>
+                <span>LiveKit WebRTC</span>
+                <span>Supabase</span>
               </div>
-              <div class="card-links">
-                <a href="https://dsaicharan072-cmyk.github.io/groupconnect/" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-live">
-                  <span class="live-pulse-dot"></span>
-                  <span>Live App</span>
+              <div class="project-actions">
+                <a href="https://dsaicharan072-cmyk.github.io/groupconnect/" target="_blank" rel="noopener noreferrer" class="btn-mandl btn-red">
+                  <span class="live-dot-white"></span>
+                  <span>LIVE APP</span>
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-                <a href="https://github.com/dsaicharan072-cmyk/groupconnect" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-github">
+                <a href="https://github.com/dsaicharan072-cmyk/groupconnect" target="_blank" rel="noopener noreferrer" class="btn-mandl btn-outline">
                   <i class="fa-brands fa-github"></i>
-                  <span>GitHub</span>
+                  <span>GITHUB</span>
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- Card 2: CoachGhost -->
-          <article class="work-card">
-            <div class="card-visual visual-coachghost">
-              <span class="visual-badge">Multi-Agent AI Pipeline</span>
-              <div class="visual-symbol">
-                <i class="fa-solid fa-brain"></i>
-              </div>
+          <!-- Project 02: CoachGhost -->
+          <article class="project-row">
+            <div class="project-visual-tile tile-dark" data-pixel-tile>
+              <div class="tile-grid-bg"></div>
+              <span class="tile-index">02</span>
+              <i class="fa-solid fa-brain tile-icon"></i>
+              <span class="tile-tag">MULTI-AGENT AI</span>
             </div>
-            <div class="card-body">
-              <div class="card-meta-line">
-                <span class="card-year">2025</span>
-                <span>FastAPI · React · Gemini 2.5 Flash · Groq Llama 3.3 70B · BART-MNLI</span>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="meta-year">2025</span>
+                <span class="meta-stack">FastAPI · React · Three.js · Gemini 2.5 Flash · Groq Llama 3.3 70B · BART-MNLI</span>
               </div>
-              <h3 class="card-title">CoachGhost — Multi-Agent AI Scouting Platform</h3>
-              <p class="card-summary">
-                Orchestrated 4 autonomous AI agents in an asynchronous pipeline analyzing opponent match footage directly from YouTube to generate tactical scouting reports. Engineered Server-Sent Events (SSE) streaming APIs for live report generation with under 2-second first-token latency; shipped solo for a hackathon.
+              <h3 class="project-name">CoachGhost — Multi-Agent AI Scouting Platform</h3>
+              <p class="project-desc">
+                Orchestrated 4 autonomous AI agents in an asynchronous pipeline analyzing opponent match footage directly from YouTube to generate tactical scouting reports and interactive 3D sport tactical canvases. Engineered Server-Sent Events (SSE) streaming APIs for live report generation with under 2-second first-token latency; shipped solo for a hackathon.
               </p>
-              <div class="card-tags">
-                <span class="tag">FastAPI</span>
-                <span class="tag">Gemini 2.5</span>
-                <span class="tag">Groq Llama 3.3 70B</span>
-                <span class="tag">BART-MNLI</span>
-                <span class="tag">SSE Streaming</span>
-                <span class="tag">React/Vite</span>
+              <div class="project-tags">
+                <span>FastAPI</span>
+                <span>Gemini 2.5</span>
+                <span>Groq Llama 3.3 70B</span>
+                <span>BART-MNLI</span>
+                <span>Three.js</span>
+                <span>React/Vite</span>
               </div>
-              <div class="card-links">
-                <a href="https://dsaicharan072-cmyk.github.io/CoachGhost_project/" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-live">
-                  <span class="live-pulse-dot"></span>
-                  <span>Live App</span>
+              <div class="project-actions">
+                <a href="https://dsaicharan072-cmyk.github.io/CoachGhost_project/" target="_blank" rel="noopener noreferrer" class="btn-mandl btn-red">
+                  <span class="live-dot-white"></span>
+                  <span>LIVE APP</span>
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-                <a href="https://github.com/dsaicharan072-cmyk/CoachGhost_project" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-github">
+                <a href="https://github.com/dsaicharan072-cmyk/CoachGhost_project" target="_blank" rel="noopener noreferrer" class="btn-mandl btn-outline">
                   <i class="fa-brands fa-github"></i>
-                  <span>GitHub</span>
+                  <span>GITHUB</span>
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- Card 3: Technical Interview Platform -->
-          <article class="work-card">
-            <div class="card-visual visual-interview">
-              <span class="visual-badge">Enterprise EdTech & Voice AI</span>
-              <div class="visual-symbol">
-                <i class="fa-solid fa-microphone-lines"></i>
-              </div>
+          <!-- Project 03: Technical Interview Platform -->
+          <article class="project-row">
+            <div class="project-visual-tile" data-pixel-tile>
+              <div class="tile-grid-bg"></div>
+              <span class="tile-index">03</span>
+              <i class="fa-solid fa-microphone-lines tile-icon"></i>
+              <span class="tile-tag">VOICE AI &amp; SANDBOX</span>
             </div>
-            <div class="card-body">
-              <div class="card-meta-line">
-                <span class="card-year">2026</span>
-                <span>FastAPI · React · SQLite · Argon2id · In-Memory Voice Streaming</span>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="meta-year">2026</span>
+                <span class="meta-stack">FastAPI · React · Pyodide WASM · Argon2id · Web Speech API</span>
               </div>
-              <h3 class="card-title">Technical Interview Platform — College Edition</h3>
-              <p class="card-summary">
-                Privacy-first AI technical interview simulator built for university placement drives. Enforces partial unique database index constraints ensuring single official attempts, strict zero-audio storage with in-memory speech-to-text processing, role-based access control (Admin, Faculty, Candidate), and offline simulation mode with zero paid API lock-in.
+              <h3 class="project-name">Technical Interview Platform — College Edition</h3>
+              <p class="project-desc">
+                Privacy-first AI technical interview simulator built for university placement drives. Features interactive voice &amp; text interviewing, client-side Python (Pyodide WASM) &amp; JavaScript code execution, multi-dimensional rubric scorecards, role-based access control (Admin, Faculty, Candidate), and zero-audio storage.
               </p>
-              <div class="card-tags">
-                <span class="tag">FastAPI</span>
-                <span class="tag">React</span>
-                <span class="tag">Voice Synthesis</span>
-                <span class="tag">RBAC</span>
-                <span class="tag">Argon2id</span>
-                <span class="tag">Docker</span>
+              <div class="project-tags">
+                <span>FastAPI</span>
+                <span>React</span>
+                <span>Pyodide WASM</span>
+                <span>Voice AI</span>
+                <span>RBAC</span>
+                <span>Docker</span>
               </div>
-              <div class="card-links">
-                <a href="https://dsaicharan072-cmyk.github.io/interview/" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-live">
-                  <span class="live-pulse-dot"></span>
-                  <span>Live App</span>
+              <div class="project-actions">
+                <a href="https://dsaicharan072-cmyk.github.io/interview/" target="_blank" rel="noopener noreferrer" class="btn-mandl btn-red">
+                  <span class="live-dot-white"></span>
+                  <span>LIVE APP</span>
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-                <a href="https://github.com/dsaicharan072-cmyk/interview" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-github">
+                <a href="https://github.com/dsaicharan072-cmyk/interview" target="_blank" rel="noopener noreferrer" class="btn-mandl btn-outline">
                   <i class="fa-brands fa-github"></i>
-                  <span>GitHub</span>
+                  <span>GITHUB</span>
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- Card 4: Mirai Handbook RAG (AI Document Knowledge Assistant) -->
-          <article class="work-card">
-            <div class="card-visual visual-nats">
-              <span class="visual-badge">Generative AI & Semantic Retrieval</span>
-              <div class="visual-symbol">
-                <i class="fa-solid fa-book-bookmark"></i>
-              </div>
+          <!-- Project 04: Mirai Handbook RAG -->
+          <article class="project-row">
+            <div class="project-visual-tile tile-dark" data-pixel-tile>
+              <div class="tile-grid-bg"></div>
+              <span class="tile-index">04</span>
+              <i class="fa-solid fa-book-bookmark tile-icon"></i>
+              <span class="tile-tag">SEMANTIC RAG ENGINE</span>
             </div>
-            <div class="card-body">
-              <div class="card-meta-line">
-                <span class="card-year">2026</span>
-                <span>Python · LangChain · ChromaDB · OpenAI / Gemini Embeddings · FastAPI</span>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="meta-year">2026</span>
+                <span class="meta-stack">Python · LangChain · ChromaDB · OpenAI / Gemini Embeddings · FastAPI</span>
               </div>
-              <h3 class="card-title">Mirai Handbook — AI Document Knowledge Engine</h3>
-              <p class="card-summary">
+              <h3 class="project-name">Mirai Handbook — AI Document Knowledge Engine</h3>
+              <p class="project-desc">
                 Production-grade Retrieval-Augmented Generation (RAG) knowledge engine indexing organization handbooks, engineering docs, and policy guidelines. Implements semantic vector embeddings in ChromaDB, recursive contextual chunking, MMR reranking, hallucination guardrails, and citation-backed responses for employees and developers.
               </p>
-              <div class="card-tags">
-                <span class="tag">Python</span>
-                <span class="tag">RAG Engine</span>
-                <span class="tag">LangChain</span>
-                <span class="tag">ChromaDB</span>
-                <span class="tag">Vector Search</span>
-                <span class="tag">FastAPI</span>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>RAG Engine</span>
+                <span>LangChain</span>
+                <span>ChromaDB</span>
+                <span>Vector Search</span>
+                <span>FastAPI</span>
               </div>
-              <div class="card-links">
-                <a href="https://github.com/dsaicharan072-cmyk/mirai-handbook-rag" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-github" style="grid-column: 1 / -1; width: 100%; justify-content: center;">
+              <div class="project-actions">
+                <a href="https://github.com/dsaicharan072-cmyk/mirai-handbook-rag" target="_blank" rel="noopener noreferrer" class="btn-mandl btn-ink">
                   <i class="fa-brands fa-github"></i>
-                  <span>Explore Repository on GitHub</span>
+                  <span>EXPLORE REPOSITORY ON GITHUB</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- Card 5: Resume Forge -->
-          <article class="work-card">
-            <div class="card-visual visual-coachghost">
-              <span class="visual-badge">Productivity & ATS Resume Intelligence</span>
-              <div class="visual-symbol">
-                <i class="fa-solid fa-file-contract"></i>
-              </div>
+          <!-- Project 05: Resume Forge -->
+          <article class="project-row">
+            <div class="project-visual-tile" data-pixel-tile>
+              <div class="tile-grid-bg"></div>
+              <span class="tile-index">05</span>
+              <i class="fa-solid fa-file-contract tile-icon"></i>
+              <span class="tile-tag">ATS INTELLIGENCE</span>
             </div>
-            <div class="card-body">
-              <div class="card-meta-line">
-                <span class="card-year">2026</span>
-                <span>React · ATS Parser · Career Simulator · PDF Engine · LocalStorage</span>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="meta-year">2026</span>
+                <span class="meta-stack">React · ATS Parser · Skill Gap Engine · Interview Prep · Career Simulator</span>
               </div>
-              <h3 class="card-title">Resume Forge — Interactive Resume & ATS Platform</h3>
-              <p class="card-summary">
-                Modern resume analysis and ATS scoring platform featuring interactive PDF parsing, direct ATS match evaluations, simulated AI Recruiter hiring manager reviews for Big Tech and startups, skill gap visualizations, and instant client-side draft compilation.
+              <h3 class="project-name">Resume Forge — Interactive Resume &amp; ATS Platform</h3>
+              <p class="project-desc">
+                Dynamic resume analysis and ATS scoring platform featuring browser-side PDF/DOCX parsing, personalized skill gap engine, tailored technical interview prep, company fit ranking, learning roadmaps, and simulated AI Recruiter reviews driven directly by the uploaded resume.
               </p>
-              <div class="card-tags">
-                <span class="tag">React</span>
-                <span class="tag">ATS Scoring</span>
-                <span class="tag">AI Recruiter</span>
-                <span class="tag">PDF Parsing</span>
-                <span class="tag">Career Simulation</span>
+              <div class="project-tags">
+                <span>React</span>
+                <span>ATS Scoring</span>
+                <span>Skill Gap Engine</span>
+                <span>AI Recruiter</span>
+                <span>PDF Parsing</span>
               </div>
-              <div class="card-links">
-                <a href="https://dsaicharan072-cmyk.github.io/Resume_forge/" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-live">
-                  <span class="live-pulse-dot"></span>
-                  <span>Live App</span>
+              <div class="project-actions">
+                <a href="https://dsaicharan072-cmyk.github.io/Resume_forge/" target="_blank" rel="noopener noreferrer" class="btn-mandl btn-red">
+                  <span class="live-dot-white"></span>
+                  <span>LIVE APP</span>
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-                <a href="https://github.com/dsaicharan072-cmyk/Resume_forge" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-github">
+                <a href="https://github.com/dsaicharan072-cmyk/Resume_forge" target="_blank" rel="noopener noreferrer" class="btn-mandl btn-outline">
                   <i class="fa-brands fa-github"></i>
-                  <span>GitHub</span>
+                  <span>GITHUB</span>
                 </a>
               </div>
             </div>
@@ -327,272 +339,211 @@
       </div>
     </section>
 
-    <!-- Open Source Section (Production Code Verification from Resume) -->
-    <section class="section-oss" id="oss">
+    <!-- Open Source Section (Dark Contrast Band) -->
+    <section class="mandl-section mandl-dark-band" id="oss">
       <div class="container">
-        <div class="section-header-row">
-          <div>
-            <span class="section-kicker">Open Source Experience</span>
-            <h2 class="section-headline">Verified Pull Requests & Mentorship</h2>
+        <div class="section-bar dark-bar">
+          <div class="section-title-group">
+            <span class="section-index red-index">02 / OPEN SOURCE</span>
+            <h2 class="section-title">Verified Pull Requests &amp; Mentorship</h2>
           </div>
-          <a href="https://github.com/pulls?q=author%3Adsaicharan072-cmyk+is%3Apr" target="_blank" rel="noopener noreferrer" class="header-action-link">
-            <span>View All PRs on GitHub</span>
+          <a href="https://github.com/pulls?q=author%3Adsaicharan072-cmyk+is%3Apr" target="_blank" rel="noopener noreferrer" class="btn-mandl btn-red-outline">
+            <span>VIEW ALL PRS ON GITHUB</span>
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
 
-        <div class="oss-table-container">
-          <!-- Apicurio Registry -->
-          <div class="oss-row">
-            <div class="oss-col-org">
-              <span class="org-badge badge-apicurio">Apicurio Registry</span>
-              <span class="oss-tech-pill">LFX Mentorship (Linux Foundation)</span>
+        <div class="oss-grid">
+          <div class="oss-item">
+            <div class="oss-head">
+              <span class="oss-org">Apicurio Registry</span>
+              <span class="oss-status merged">MERGED</span>
             </div>
-            <div class="oss-col-desc">
-              <h4>Protobuf Compatibility & Drafts Leak DB Upgrade</h4>
-              <p>
-                Fixed argument-order bug in Protobuf compatibility checker giving wrong FORWARD/FULL_TRANSITIVE results (<span class="mono-code">PR #9687</span>) with typed DifferenceType enum and asymmetric tests. Fixed promoted default-group drafts never being removed (<span class="mono-code">PR #10524</span>) with DB upgrade steps across H2/PostgreSQL/MySQL/SQL Server. Opened <span class="mono-code">PR #10691</span> Quarkus 3.33.4.1 CVE upgrade.
-              </p>
-            </div>
-            <div class="oss-col-status">
-              <span class="status-pill-merged">Merged</span>
-              <a href="https://github.com/Apicurio/apicurio-registry/pull/10524" target="_blank" rel="noopener noreferrer" class="mono-link">
-                PR #10524 <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
+            <div class="oss-sub">LFX Mentorship (Linux Foundation) · Java</div>
+            <h4>Protobuf Compatibility &amp; Drafts Leak DB Upgrade</h4>
+            <p>
+              Fixed argument-order bug in Protobuf compatibility checker giving wrong FORWARD/FULL_TRANSITIVE results (<code>PR #9687</code>) with typed DifferenceType enum. Fixed promoted default-group drafts never being removed (<code>PR #10524</code>) across H2/PostgreSQL/MySQL/SQL Server. Opened <code>PR #10691</code> Quarkus CVE upgrade.
+            </p>
+            <a href="https://github.com/Apicurio/apicurio-registry/pull/10524" target="_blank" rel="noopener noreferrer" class="oss-link">
+              PR #10524 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
           </div>
 
-          <!-- OpenAirInterface -->
-          <div class="oss-row">
-            <div class="oss-col-org">
-              <span class="org-badge badge-oai">OpenAirInterface 5G</span>
-              <span class="oss-tech-pill">Duranta Project · 5G RAN / NR UE (C)</span>
+          <div class="oss-item">
+            <div class="oss-head">
+              <span class="oss-org">OpenAirInterface 5G</span>
+              <span class="oss-status merged">MERGED</span>
             </div>
-            <div class="oss-col-desc">
-              <h4>nrUE TC-RNTI Contention & SIGFPE Crash Prevention</h4>
-              <p>
-                Fixed nrUE Msg3 C-RNTI MAC CE overwriting TC-RNTI during random access (<span class="mono-code">PR #774</span>, issue #768). Fixed SIGFPE floating-point crash when CSI-RS resource lacks periodicityAndOffset (<span class="mono-code">PR #832</span>). Replaced AssertFatal abort on supplementaryUplink with validation & graceful recovery (<span class="mono-code">PR #1015</span>) and linked DPDK via pkg-config (<span class="mono-code">PR #701</span>).
-              </p>
-            </div>
-            <div class="oss-col-status">
-              <span class="status-pill-merged">Merged</span>
-              <a href="https://github.com/duranta-project/openairinterface5g/pull/774" target="_blank" rel="noopener noreferrer" class="mono-link">
-                PR #774, #701, #832 <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
+            <div class="oss-sub">Duranta Project · 5G RAN / NR UE (C)</div>
+            <h4>nrUE TC-RNTI Contention &amp; SIGFPE Crash Prevention</h4>
+            <p>
+              Fixed nrUE Msg3 C-RNTI MAC CE overwriting TC-RNTI during random access (<code>PR #774</code>). Fixed SIGFPE floating-point crash when CSI-RS resource lacks periodicityAndOffset (<code>PR #832</code>). Replaced AssertFatal abort with graceful recovery (<code>PR #1015</code>) and linked DPDK via pkg-config (<code>PR #701</code>).
+            </p>
+            <a href="https://github.com/duranta-project/openairinterface5g/pull/774" target="_blank" rel="noopener noreferrer" class="oss-link">
+              PR #774, #701, #832 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
           </div>
 
-          <!-- Rocket.Chat -->
-          <div class="oss-row">
-            <div class="oss-col-org">
-              <span class="org-badge badge-rocketchat">Rocket.Chat</span>
-              <span class="oss-tech-pill">Active Contributor · TypeScript</span>
+          <div class="oss-item">
+            <div class="oss-head">
+              <span class="oss-org">Rocket.Chat</span>
+              <span class="oss-status merged">MERGED</span>
             </div>
-            <div class="oss-col-desc">
-              <h4>AppsEngine Deno Runtime & Moleculer Logger</h4>
-              <p>
-                Repaired broken symlink in <span class="mono-code">AppsEngineDenoRuntime.ts</span> after deno-runtime relocation (<span class="mono-code">PR #40947</span>). Fixed dotall-regex bug truncating slash-command parameters at line breaks (<span class="mono-code">PR #41325</span>). Routed ddp-streamer exception logging through Moleculer broker logger with 146 passing unit tests (<span class="mono-code">PR #42356</span>).
-              </p>
-            </div>
-            <div class="oss-col-status">
-              <span class="status-pill-merged">Merged</span>
-              <a href="https://github.com/RocketChat/Rocket.Chat/pull/40947" target="_blank" rel="noopener noreferrer" class="mono-link">
-                PR #40947 <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
+            <div class="oss-sub">Active Contributor · TypeScript</div>
+            <h4>AppsEngine Deno Runtime &amp; Moleculer Logger</h4>
+            <p>
+              Repaired broken symlink in <code>AppsEngineDenoRuntime.ts</code> after deno-runtime relocation (<code>PR #40947</code>). Fixed dotall-regex bug truncating slash-command parameters at line breaks (<code>PR #41325</code>). Routed ddp-streamer exception logging through Moleculer broker logger with 146 passing unit tests (<code>PR #42356</code>).
+            </p>
+            <a href="https://github.com/RocketChat/Rocket.Chat/pull/40947" target="_blank" rel="noopener noreferrer" class="oss-link">
+              PR #40947 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
           </div>
 
-          <!-- MIT App Inventor -->
-          <div class="oss-row">
-            <div class="oss-col-org">
-              <span class="org-badge badge-apicurio" style="color: #F59E0B;">MIT App Inventor</span>
-              <span class="oss-tech-pill">iOS Companion · Swift</span>
+          <div class="oss-item">
+            <div class="oss-head">
+              <span class="oss-org">MIT App Inventor</span>
+              <span class="oss-status review">UNDER REVIEW</span>
             </div>
-            <div class="oss-col-desc">
-              <h4>ImageSprite Origin/Rotation & Unicode-Safe Split</h4>
-              <p>
-                Fixed iOS ImageSprite origin/rotation and OrientationSensor reference-frame bugs (<span class="mono-code">PR #4145</span>) with clean iOS CI pass. Fixed string-split crash and character corruption on iOS with a Unicode-safe split matching Android parity (<span class="mono-code">PR #4167</span>).
-              </p>
-            </div>
-            <div class="oss-col-status">
-              <span class="status-pill-approved">Under Review</span>
-              <a href="https://github.com/mit-csl/appinventor-sources" target="_blank" rel="noopener noreferrer" class="mono-link">
-                PR #4145, #4167 <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
+            <div class="oss-sub">iOS Companion · Swift</div>
+            <h4>ImageSprite Origin/Rotation &amp; Unicode-Safe Split</h4>
+            <p>
+              Fixed iOS ImageSprite origin/rotation and OrientationSensor reference-frame bugs (<code>PR #4145</code>) with clean iOS CI pass. Fixed string-split crash and character corruption on iOS with a Unicode-safe split matching Android parity (<code>PR #4167</code>).
+            </p>
+            <a href="https://github.com/mit-csl/appinventor-sources" target="_blank" rel="noopener noreferrer" class="oss-link">
+              PR #4145, #4167 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
           </div>
 
-          <!-- Processing / p5.js -->
-          <div class="oss-row">
-            <div class="oss-col-org">
-              <span class="org-badge badge-p5">p5.js Web Editor</span>
-              <span class="oss-tech-pill">Pull Request #4189 · JavaScript</span>
+          <div class="oss-item">
+            <div class="oss-head">
+              <span class="oss-org">p5.js Web Editor</span>
+              <span class="oss-status review">APPROVED</span>
             </div>
-            <div class="oss-col-desc">
-              <h4>Loop Protection AST Transform Preprocessor</h4>
-              <p>
-                Resolved preprocessor bug causing <span class="mono-code">ReferenceError: LP0 is not defined</span> on brace-less nested loops; all 260 tests passed and maintainer acknowledged the fix.
-              </p>
-            </div>
-            <div class="oss-col-status">
-              <span class="status-pill-approved">Approved</span>
-              <a href="https://github.com/processing/p5.js-web-editor/pull/4184" target="_blank" rel="noopener noreferrer" class="mono-link">
-                PR #4189 <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
+            <div class="oss-sub">Pull Request #4189 · JavaScript</div>
+            <h4>Loop Protection AST Transform Preprocessor</h4>
+            <p>
+              Resolved preprocessor bug causing <code>ReferenceError: LP0 is not defined</code> on brace-less nested loops; all 260 tests passed and maintainer acknowledged the fix.
+            </p>
+            <a href="https://github.com/processing/p5.js-web-editor/pull/4184" target="_blank" rel="noopener noreferrer" class="oss-link">
+              PR #4189 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Disciplines Section (Jake Sinclair 6-Capabilities Editorial Layout) -->
-    <section class="section-expertise" id="disciplines">
+    <!-- Disciplines Section -->
+    <section class="mandl-section" id="disciplines">
       <div class="container">
-        <div class="section-header-row">
-          <div>
-            <span class="section-kicker">Core Competencies</span>
-            <h2 class="section-headline">Disciplines &amp; Craft</h2>
+        <div class="section-bar">
+          <div class="section-title-group">
+            <span class="section-index">03 / CAPABILITIES</span>
+            <h2 class="section-title">Disciplines &amp; Craft</h2>
           </div>
-          <p class="section-dek">
+          <p class="section-note">
             Every codebase I touch balances robust engineering fundamentals with speed and clarity.
           </p>
         </div>
 
-        <div class="disciplines-list">
-          <div class="discipline-item">
-            <span class="discipline-num">01</span>
-            <div>
-              <h3 class="discipline-title">Full-Stack Web Engineering</h3>
-              <p class="discipline-desc">
-                I build end-to-end web applications with React, Next.js, and Node.js. Clean component hierarchies, state management, and responsive UIs built for real-world user engagement.
-              </p>
-            </div>
-            <div class="discipline-meta">
-              React · Next.js · TypeScript<br>Tailwind CSS · Vite
-            </div>
+        <div class="disciplines-grid">
+          <div class="disc-card">
+            <span class="disc-num">01</span>
+            <h3>Full-Stack Web Engineering</h3>
+            <p>End-to-end web applications with React, Next.js, and Node.js. Clean component hierarchies, state management, and responsive UIs built for real-world engagement.</p>
+            <div class="disc-tech">React · Next.js · TypeScript · Tailwind CSS · Vite</div>
           </div>
 
-          <div class="discipline-item">
-            <span class="discipline-num">02</span>
-            <div>
-              <h3 class="discipline-title">Distributed Backend Systems</h3>
-              <p class="discipline-desc">
-                I design scalable REST APIs, WebSocket streaming endpoints, and event-driven architectures with Express, FastAPI, and NATS JetStream for high-throughput concurrency.
-              </p>
-            </div>
-            <div class="discipline-meta">
-              Node.js · FastAPI · Express<br>NATS JetStream · Socket.IO
-            </div>
+          <div class="disc-card">
+            <span class="disc-num">02</span>
+            <h3>Distributed Backend Systems</h3>
+            <p>Scalable REST APIs, WebSocket streaming endpoints, and event-driven architectures with Express, FastAPI, and NATS JetStream for high-throughput concurrency.</p>
+            <div class="disc-tech">Node.js · FastAPI · Express · NATS JetStream · Socket.IO</div>
           </div>
 
-          <div class="discipline-item">
-            <span class="discipline-num">03</span>
-            <div>
-              <h3 class="discipline-title">Data Structures &amp; Problem Solving</h3>
-              <p class="discipline-desc">
-                I solve computational challenges with rigorous algorithmic analysis. Over 366 LeetCode problems solved with a 100-day badge in C++ and Python across graphs, trees, and dynamic programming.
-              </p>
-            </div>
-            <div class="discipline-meta">
-              C++ · Python · Algorithms<br>366+ Solved · LeetCode
-            </div>
+          <div class="disc-card">
+            <span class="disc-num">03</span>
+            <h3>Data Structures &amp; Algorithms</h3>
+            <p>Rigorous algorithmic analysis across graphs, trees, and dynamic programming. Over 366 LeetCode problems solved with a 100-day badge in C++ and Python.</p>
+            <div class="disc-tech">C++ · Python · Algorithms · 366+ Solved</div>
           </div>
 
-          <div class="discipline-item">
-            <span class="discipline-num">04</span>
-            <div>
-              <h3 class="discipline-title">AI Integration &amp; Multi-Agent Workflows</h3>
-              <p class="discipline-desc">
-                I build intelligent RAG pipelines and autonomous agent swarms using Gemini, Claude, and open-weights models (Groq Llama 3) with fast token streaming and structured output validation.
-              </p>
-            </div>
-            <div class="discipline-meta">
-              Gemini 2.5 · Claude API<br>LangChain · Vector DBs
-            </div>
+          <div class="disc-card">
+            <span class="disc-num">04</span>
+            <h3>AI &amp; Multi-Agent Workflows</h3>
+            <p>Intelligent RAG pipelines and autonomous agent swarms using Gemini, Claude, and Groq Llama 3 with fast token streaming and structured output validation.</p>
+            <div class="disc-tech">Gemini 2.5 · Claude API · LangChain · ChromaDB</div>
           </div>
 
-          <div class="discipline-item">
-            <span class="discipline-num">05</span>
-            <div>
-              <h3 class="discipline-title">Open-Source Collaboration</h3>
-              <p class="discipline-desc">
-                I navigate large, multi-thousand-file codebases, participate in maintainer code reviews, write regression test suites, and follow Linux Foundation inclusive software best practices.
-              </p>
-            </div>
-            <div class="discipline-meta">
-              Git · GitHub Actions<br>LFC102 Certified · Code Review
-            </div>
+          <div class="disc-card">
+            <span class="disc-num">05</span>
+            <h3>Open-Source Collaboration</h3>
+            <p>Navigating multi-thousand-file codebases, participating in maintainer code reviews, writing regression test suites, and Linux Foundation best practices.</p>
+            <div class="disc-tech">Git · GitHub Actions · LFC102 Certified</div>
           </div>
 
-          <div class="discipline-item">
-            <span class="discipline-num">06</span>
-            <div>
-              <h3 class="discipline-title">Database Design &amp; DevOps</h3>
-              <p class="discipline-desc">
-                I design normalized and document schemas with MongoDB, PostgreSQL, and Firebase, containerize services with Docker, and orchestrate automated CI/CD deployment pipelines.
-              </p>
-            </div>
-            <div class="discipline-meta">
-              MongoDB · PostgreSQL<br>Docker · Linux Environments
-            </div>
+          <div class="disc-card">
+            <span class="disc-num">06</span>
+            <h3>Database Design &amp; DevOps</h3>
+            <p>Normalized and document schemas with MongoDB, PostgreSQL, and Firebase, containerizing services with Docker and orchestrating CI/CD pipelines.</p>
+            <div class="disc-tech">MongoDB · PostgreSQL · Docker · Linux</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section (Jake Sinclair Editorial Portrait Format) -->
-    <section class="section-about" id="about">
+    <!-- About & Principles -->
+    <section class="mandl-section mandl-about" id="about">
       <div class="container">
-        <div class="about-editorial-grid">
-          <div>
-            <div class="about-portrait-wrapper">
-              <img src="assets/profile.jpg" alt="Saicharan Draksharapu" class="about-portrait" />
-              <div class="about-portrait-caption">
-                Saicharan Draksharapu — Bengaluru, India
-              </div>
-            </div>
+        <div class="about-split">
+          <div class="about-left">
+            <span class="section-index">04 / PROFILE</span>
+            <h2 class="about-big-headline">Engineering with purpose, precision, and velocity.</h2>
+            <p class="about-lead">
+              I am an undergraduate in Computer Science &amp; Engineering (AI/ML specialization) at <strong>Rathinam Institute of Technology</strong>, Bengaluru (VTU) with specialized AI curriculum delivered by MIRAI School of Technology.
+            </p>
+            <p class="about-body">
+              My passion is diving into production systems where failure isn't an option: debugging TypeScript runtime environments in <strong>Rocket.Chat</strong>, fixing branch cleanup issues in Java for <strong>Apicurio Registry</strong>, or preventing SIGFPE crashes in cellular stacks in <strong>OpenAirInterface</strong>.
+            </p>
           </div>
 
-          <div>
-            <h2 class="about-headline">Engineering with purpose, precision, and velocity.</h2>
-
-            <div class="about-prose">
-              <p class="lead-paragraph">
-                I am an undergraduate in Computer Science & Engineering (AI/ML specialization) at <strong>Rathinam Institute of Technology</strong>, Bengaluru (VTU) with specialized AI curriculum delivered by MIRAI School of Technology.
-              </p>
-              <p>
-                My passion is diving into production systems where failure isn't an option: whether debugging TypeScript runtime environments in <strong>Rocket.Chat</strong>, fixing memory/branch cleanup issues in Java for <strong>Apicurio Registry</strong>, or preventing SIGFPE floating-point crashes in cellular stacks in <strong>OpenAirInterface</strong>.
-              </p>
-              <p>
-                When I’m not contributing to open-source or building full-stack applications, I am actively sharpening my algorithmic skills on LeetCode (366+ solved) and exploring cutting-edge multi-agent AI scaffolding.
-              </p>
-            </div>
-
-            <div class="experience-block">
-              <h3 class="block-title">Education &amp; Pathway</h3>
-
-              <div class="timeline-entry">
-                <span class="timeline-year">2025 — 2029</span>
-                <div class="timeline-info">
+          <div class="about-right">
+            <div class="timeline-box">
+              <div class="timeline-head">EDUCATION &amp; PATHWAY</div>
+              <div class="tl-row">
+                <span class="tl-yr">2025 — 2029</span>
+                <div>
                   <strong>B.E. Computer Science &amp; Engineering (AI/ML)</strong>
-                  <span>Rathinam Institute of Technology (VTU) · Current CGPA: 8.5</span>
+                  <span>Rathinam Institute of Technology (VTU) · CGPA: 8.5</span>
                 </div>
               </div>
-
-              <div class="timeline-entry">
-                <span class="timeline-year">2027 TARGET</span>
-                <div class="timeline-info">
+              <div class="tl-row">
+                <span class="tl-yr">2027 TARGET</span>
+                <div>
                   <strong>Google Summer of Code (GSoC) &amp; LFX Mentorship</strong>
                   <span>Focusing on Rocket.Chat, CNCF, and Linux Foundation initiatives</span>
                 </div>
               </div>
-
-              <div class="timeline-entry">
-                <span class="timeline-year">CURRENT</span>
-                <div class="timeline-info">
+              <div class="tl-row">
+                <span class="tl-yr">CURRENT</span>
+                <div>
                   <strong>Software Engineering Intern Search</strong>
-                  <span>Actively seeking high-impact remote or Bengaluru-based engineering roles</span>
+                  <span>Actively seeking high-impact remote or Bengaluru-based roles</span>
                 </div>
+              </div>
+            </div>
+
+            <div class="principles-box">
+              <div class="principle-pill">
+                <span>01</span>
+                <p>Never patch a bug without first writing a test that reproduces it.</p>
+              </div>
+              <div class="principle-pill">
+                <span>02</span>
+                <p>Great architectures start with clear boundary separation and predictable data flows.</p>
+              </div>
+              <div class="principle-pill">
+                <span>03</span>
+                <p>Consistency beats intensity — 366+ algorithmic problems and 100 consecutive days of coding.</p>
               </div>
             </div>
           </div>
@@ -600,114 +551,61 @@
       </div>
     </section>
 
-    <!-- Signal & Testimonials Section -->
-    <section class="section-testimonials">
+    <!-- Contact Section -->
+    <section class="mandl-section mandl-contact" id="contact">
       <div class="container">
-        <div class="section-header-row">
-          <div>
-            <span class="section-kicker">Guiding Values</span>
-            <h2 class="section-headline">Engineering Principles</h2>
-          </div>
-          <p class="section-dek">
-            Mindsets and commitments that drive how I write software and collaborate with teams.
-          </p>
-        </div>
-
-        <div class="quotes-grid">
-          <div class="quote-card">
-            <p class="quote-text">
-              "Never patch a bug without first writing a test that reproduces it. True code quality is demonstrated by tests that guard against future regressions."
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="section-index red-index">05 / GET IN TOUCH</span>
+            <h2 class="contact-title">Available for Internships &amp; Select Collaborations.</h2>
+            <p class="contact-copy">
+              Actively exploring Summer/Fall software engineering internships, open-source mentorships, and challenging technical projects.
             </p>
-            <div class="quote-author">
-              <span class="author-name">Maintainability</span>
-              <span class="author-role">Open Source Tenet</span>
+            <div class="contact-direct-links">
+              <a href="mailto:dsaicharan072@gmail.com" class="direct-link">
+                <span>EMAIL DIRECTLY</span>
+                <strong>dsaicharan072@gmail.com ↗</strong>
+              </a>
+              <a href="https://linkedin.com/in/saicharan-d" target="_blank" rel="noopener noreferrer" class="direct-link">
+                <span>LINKEDIN</span>
+                <strong>linkedin.com/in/saicharan-d ↗</strong>
+              </a>
             </div>
           </div>
 
-          <div class="quote-card">
-            <p class="quote-text">
-              "Great architectures do not start complex; they start with clear boundary separation, predictable data flows, and decoupled asynchronous messaging."
-            </p>
-            <div class="quote-author">
-              <span class="author-name">System Design</span>
-              <span class="author-role">Event-Driven Philosophy</span>
+          <form id="contact-form" class="mandl-form">
+            <div class="form-two">
+              <input type="text" id="name" required placeholder="YOUR NAME" />
+              <input type="email" id="email" required placeholder="YOUR EMAIL" />
             </div>
-          </div>
-
-          <div class="quote-card">
-            <p class="quote-text">
-              "Consistency beats intensity. 366+ algorithmic problems and 100 consecutive days of coding prove that sustained daily practice builds deep intuition."
-            </p>
-            <div class="quote-author">
-              <span class="author-name">Discipline</span>
-              <span class="author-role">Problem Solving Mantra</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section (Jake Sinclair "Available for Select Projects") -->
-    <section class="section-contact" id="contact">
-      <div class="container contact-container">
-        <span class="contact-pill-tag">Get in Touch</span>
-        <h2 class="contact-main-headline">Available for Internships &amp; Select Collaborations</h2>
-        <p class="contact-lead">
-          I am actively exploring Summer/Fall software engineering internships, open-source mentorships, and challenging technical projects.
-        </p>
-
-        <div class="contact-methods-row">
-          <a href="mailto:dsaicharan072@gmail.com" class="contact-action-card">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            <span class="action-label">Email Directly</span>
-            <span class="action-value">dsaicharan072@gmail.com</span>
-          </a>
-
-          <a href="https://linkedin.com/in/saicharan-d" target="_blank" rel="noopener noreferrer" class="contact-action-card">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            <span class="action-label">LinkedIn</span>
-            <span class="action-value">linkedin.com/in/saicharan-d</span>
-          </a>
-        </div>
-
-        <div class="editorial-form-wrap">
-          <form id="contact-form" class="clean-form">
-            <div class="clean-form-row">
-              <input type="text" id="name" required placeholder="Your Name" class="clean-input" />
-              <input type="email" id="email" required placeholder="Your Email" class="clean-input" />
-            </div>
-            <input type="text" id="subject" required placeholder="Subject (e.g. SDE Internship Opportunity)" class="clean-input" />
-            <textarea id="message" rows="4" required placeholder="Write your message here..." class="clean-input clean-textarea"></textarea>
-            <button type="submit" class="btn-clean btn-solid btn-full">
-              <span>Send Message</span>
+            <input type="text" id="subject" required placeholder="SUBJECT (E.G. SDE INTERNSHIP)" />
+            <textarea id="message" rows="4" required placeholder="WRITE YOUR MESSAGE HERE..."></textarea>
+            <button type="submit" class="btn-mandl btn-red btn-block">
+              <span>SEND MESSAGE</span>
               <i class="fa-solid fa-paper-plane"></i>
             </button>
-            <div id="form-status" class="form-status-msg"></div>
+            <div id="form-status" class="form-status"></div>
           </form>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Minimalist Bottom Bar (Jake Sinclair Style) -->
-  <footer class="site-footer">
-    <div class="container footer-container">
-      <div>
-        <div class="footer-name">Saicharan Draksharapu</div>
-        <div class="footer-sub">Full-Stack Developer &amp; Open-Source Contributor</div>
+  <!-- Minimalist Footer -->
+  <footer class="mandl-footer">
+    <div class="container footer-row">
+      <div class="footer-id">
+        <span class="footer-mark">SAICHARAN DRAKSHARAPU</span>
+        <span class="footer-role">Full-Stack Engineer &amp; Open-Source Contributor</span>
       </div>
-
-      <div class="footer-links-col">
+      <div class="footer-socials">
         <a href="https://github.com/dsaicharan072-cmyk" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://linkedin.com/in/saicharan-d" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://leetcode.com/SaiCharan072" target="_blank" rel="noopener noreferrer">LeetCode</a>
         <a href="https://codeforces.com/profile/SaiCharan072" target="_blank" rel="noopener noreferrer">Codeforces</a>
         <a href="mailto:dsaicharan072@gmail.com">Email</a>
       </div>
-
-      <div class="footer-right-col">
-        &copy; 2026 Saicharan Draksharapu
-      </div>
+      <div class="footer-copy">&copy; 2026 SAICHARAN</div>
     </div>
   </footer>
 
