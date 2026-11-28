@@ -99,6 +99,72 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 3b. Animated Pixelated Project Gallery Canvases (Christoph Mandl Gallery)
+  const tiles = document.querySelectorAll('[data-pixel-tile]');
+  tiles.forEach((tile, idx) => {
+    const canvas = document.createElement('canvas');
+    canvas.className = 'tile-art-canvas';
+    canvas.setAttribute('aria-hidden', 'true');
+    tile.insertBefore(canvas, tile.firstChild);
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let phase = idx * 1.4;
+    let isHovered = false;
+
+    function renderFrame(pixelScale) {
+      const cols = Math.max(12, Math.floor(140 / pixelScale));
+      const rows = Math.max(12, Math.floor(130 / pixelScale));
+      canvas.width = cols;
+      canvas.height = rows;
+      ctx.imageSmoothingEnabled = false;
+
+      ctx.fillStyle = '#141412';
+      ctx.fillRect(0, 0, cols, rows);
+
+      // Draw kinetic pixel blocks in earthy olive + vivid red
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+          const wave = Math.sin(x * 0.45 + phase) * Math.cos(y * 0.45 - phase * 0.7);
+          if (wave > 0.62) {
+            ctx.fillStyle = '#ff1e00';
+            ctx.fillRect(x, y, 1, 1);
+          } else if (wave > 0.28) {
+            ctx.fillStyle = '#9f9d89';
+            ctx.fillRect(x, y, 1, 1);
+          } else if (wave > 0.05) {
+            ctx.fillStyle = '#47463c';
+            ctx.fillRect(x, y, 1, 1);
+          }
+        }
+      }
+    }
+
+    renderFrame(6);
+
+    const row = tile.closest('.project-row');
+    let rafId = null;
+    function animate() {
+      if (!isHovered) return;
+      phase += 0.06;
+      renderFrame(3);
+      rafId = requestAnimationFrame(animate);
+    }
+
+    if (row) {
+      row.addEventListener('mouseenter', () => {
+        isHovered = true;
+        animate();
+      });
+      row.addEventListener('mouseleave', () => {
+        isHovered = false;
+        if (rafId) cancelAnimationFrame(rafId);
+        renderFrame(6);
+      });
+    }
+  });
+
   // 4. Contact Form Mailto Handler
   const contactForm = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
